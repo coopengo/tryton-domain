@@ -23,7 +23,8 @@ function make(ts) {
       }
     }
     else if (_.isFunction(t.r)) {
-      t.r(resolve(t.p, t.c, t.d)).should.equal(true);
+      t.r(resolve(t.p, t.c, t.d))
+        .should.equal(true);
     }
     else {
       t.r.should.equal(resolve(t.p, t.c, t.d));
