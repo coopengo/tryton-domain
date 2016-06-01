@@ -169,7 +169,7 @@ exports.pyson = [{
     v: 'code'
   }],
   c: {
-    'code': 'foo'
+    code: 'foo'
   },
   d: {},
   r: checkLeaf({
@@ -180,7 +180,7 @@ exports.pyson = [{
 }, {
   p: complex_domain,
   c: {
-    'code': 'honey'
+    code: 'honey'
   },
   d: {
     name: 'Foo'
