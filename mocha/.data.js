@@ -1,6 +1,6 @@
 /* jshint -W069 */
 var _ = require('underscore');
-checkLeaf = function (target) {
+var checkLeaf = function (target) {
   return function (vals) {
     var res = true;
     _.each(_.keys(target), (k) => {
@@ -8,9 +8,9 @@ checkLeaf = function (target) {
         res = false;
       }
     });
-    return res
-  }
-}
+    return res;
+  };
+};
 exports.simple = [{
   p: ['name', '=', 'Foo'],
   c: null,
@@ -34,7 +34,7 @@ exports.simple = [{
     op: '=',
     v: 'Foo'
   })
-}]
+}];
 exports.and = [{
   p: [
     ['name', '=', 'Foo'],
@@ -91,7 +91,7 @@ exports.and = [{
     op: '=',
     v: 'Foo'
   })
-}]
+}];
 exports.or = [{
   p: ['OR', ['name', '=', 'Foo'],
     ['code', '=', 'bar']
@@ -146,7 +146,7 @@ exports.or = [{
     v: 'bar',
     k: undefined
   })
-}]
+}];
 var complex_domain = [
   ['name', '=', 'Foo'], {
     __class__: 'If',
@@ -162,7 +162,7 @@ var complex_domain = [
     t: ['id', '=', 10],
     e: ['id', '=', 20]
   }
-]
+];
 exports.pyson = [{
   p: ['name', '=', {
     __class__: 'Eval',
@@ -225,4 +225,4 @@ exports.pyson = [{
     }
     return true;
   }
-}]
+}];
